@@ -9,14 +9,17 @@
   },
   "scripts": {
     "start": "serve -l 3000 src",
-    "test": "npm run eslint",
-    "eslint": "eslint 'src/**/*.js' 'test/**/*.js' 'test-sample-solution/**/*.js' 'tutorial-snippets/**/*.js'"
+    "eslint": "eslint src/**/*.js test/**/*.js test-sample-solution/**/*.js tutorial-snippets/**/*.js",
+    "cypress:run": "cypress run",
+    "test": "npm run eslint && start-test 3000 cypress:run"
   },
   "dependencies": {},
   "devDependencies": {
+    "cypress": "^9.2.0",
     "eslint": "^7.19.0",
     "eslint-plugin-prettier": "^3.3.1",
     "prettier": "^2.2.1",
-    "serve": "^11.3.2"
+    "serve": "^11.3.2",
+    "start-server-and-test": "^1.14.0"
   }
 }
